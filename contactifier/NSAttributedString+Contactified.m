@@ -26,12 +26,12 @@
      options:NSAttributedStringEnumerationReverse
      usingBlock:^(NSDictionary<NSString *,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop) {
          
-         NSURL *link = [attrs valueForKey:NSLinkAttributeName];
+         NSURL *link = [attrs valueForKey:@"__kIMLinkAttributeName"];
          if ([link.scheme isEqualToString:@"tel"]) {
              
-             NSString *phone = [[mutableSelf attributedSubstringFromRange:range] string];
-             CNContactStore *store = [[CNContactStore alloc] init];
-             NSString *name = [store nameForPhoneNumber:phone];
+//             NSString *phone = [[mutableSelf attributedSubstringFromRange:range] string];
+//             CNContactStore *store = [[CNContactStore alloc] init];
+             NSString *name = @"Stoyan Stoyanov";// [store nameForPhoneNumber:phone];
              
              if (name) {
                  NSString *originalText = [[mutableSelf attributedSubstringFromRange:range] string];
