@@ -9,5 +9,5 @@
 #import <Contacts/Contacts.h>
 
 @interface CNContactStore (NameForPhoneNumber)
-- (void)nameForPhoneNumber:(NSString *)searchedPhone withCompletion:(void (^)(NSString *))completionBlock;
+- (NSString *)nameForPhoneNumber:(NSString *)searchedPhone;
 @end

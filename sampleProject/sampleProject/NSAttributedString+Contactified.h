@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSAttributedString (Contactified)
-- (void)contactifyStringWithCompletion:(void (^)(NSAttributedString *))completion;
+- (NSAttributedString *)contactifiedString;
 @end

@@ -23,13 +23,7 @@
     [string addAttribute:NSLinkAttributeName value:[NSURL URLWithString:@"tel://0897949488"] range:NSMakeRange(text.length - 10,10)];
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithAttributedString:string];
     
-    ViewController __weak *weakSelf = self;
-    [attributedString contactifyStringWithCompletion:^(NSAttributedString *contactified) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            weakSelf.textView.attributedText = contactified;
-        });
-    }];
-    
+    self.textView.attributedText = [attributedString contactifiedString];
     self.textView.editable = NO;
 }
 
