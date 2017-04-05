@@ -1,0 +1,9 @@
+Package: com.stoqn4opm.contactifier
+Name: contactifier
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Stoyan Stoyanov
+Author: Stoyan Stoyanov
+Section: Tweaks
