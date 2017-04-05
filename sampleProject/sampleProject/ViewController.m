@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -16,14 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSString *text = @"089 5155789 is the number that you have dialed before several days";
+    NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:text];
+    [string addAttribute:NSLinkAttributeName value:[NSURL URLWithString:@"tel://0895155789"] range:NSMakeRange(0,11)];
+    
+    self.textView.attributedText = string;
+    self.textView.editable = NO;
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end
