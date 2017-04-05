@@ -13,6 +13,7 @@
 		327799041E9505A200E27E49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327799021E9505A200E27E49 /* Main.storyboard */; };
 		327799061E9505A200E27E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 327799051E9505A200E27E49 /* Assets.xcassets */; };
 		327799091E9505A200E27E49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327799071E9505A200E27E49 /* LaunchScreen.storyboard */; };
+		327799121E95068B00E27E49 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327799111E95068B00E27E49 /* Contacts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		327799051E9505A200E27E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		327799081E9505A200E27E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3277990A1E9505A200E27E49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		327799111E95068B00E27E49 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327799121E95068B00E27E49 /* Contacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 			children = (
 				327798F81E9505A200E27E49 /* sampleProject */,
 				327798F71E9505A200E27E49 /* Products */,
+				327799101E95068B00E27E49 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +81,14 @@
 				327798FA1E9505A200E27E49 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		327799101E95068B00E27E49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				327799111E95068B00E27E49 /* Contacts.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
