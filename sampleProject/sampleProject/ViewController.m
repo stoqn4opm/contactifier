@@ -7,21 +7,29 @@
 //
 
 #import "ViewController.h"
+#import "NSAttributedString+Contactified.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *textView;
-
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *text = @"089 5155789 is the number that you have dialed before several days";
+    NSString *text = @"0895155789 is the number that you have dialed before several days, and you have tried this number also 0897949488";
     NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:text];
-    [string addAttribute:NSLinkAttributeName value:[NSURL URLWithString:@"tel://0895155789"] range:NSMakeRange(0,11)];
+    [string addAttribute:NSLinkAttributeName value:[NSURL URLWithString:@"tel://0895155789"] range:NSMakeRange(0,10)];
+    [string addAttribute:NSLinkAttributeName value:[NSURL URLWithString:@"tel://0897949488"] range:NSMakeRange(text.length - 10,10)];
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithAttributedString:string];
     
-    self.textView.attributedText = string;
+    ViewController __weak *weakSelf = self;
+    [attributedString contactifyStringWithCompletion:^(NSAttributedString *contactified) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            weakSelf.textView.attributedText = contactified;
+        });
+    }];
+    
     self.textView.editable = NO;
 }
 
