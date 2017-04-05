@@ -15,6 +15,7 @@
 		327799091E9505A200E27E49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327799071E9505A200E27E49 /* LaunchScreen.storyboard */; };
 		327799121E95068B00E27E49 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327799111E95068B00E27E49 /* Contacts.framework */; };
 		327799151E9506E900E27E49 /* CNContact+HasThisPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 327799141E9506E900E27E49 /* CNContact+HasThisPhone.m */; };
+		327799181E95080800E27E49 /* CNContactStore+NameForPhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 327799171E95080800E27E49 /* CNContactStore+NameForPhoneNumber.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		327799111E95068B00E27E49 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		327799131E9506E900E27E49 /* CNContact+HasThisPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CNContact+HasThisPhone.h"; sourceTree = "<group>"; };
 		327799141E9506E900E27E49 /* CNContact+HasThisPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CNContact+HasThisPhone.m"; sourceTree = "<group>"; };
+		327799161E95080800E27E49 /* CNContactStore+NameForPhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CNContactStore+NameForPhoneNumber.h"; sourceTree = "<group>"; };
+		327799171E95080800E27E49 /* CNContactStore+NameForPhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CNContactStore+NameForPhoneNumber.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				327799001E9505A200E27E49 /* ViewController.m */,
 				327799131E9506E900E27E49 /* CNContact+HasThisPhone.h */,
 				327799141E9506E900E27E49 /* CNContact+HasThisPhone.m */,
+				327799161E95080800E27E49 /* CNContactStore+NameForPhoneNumber.h */,
+				327799171E95080800E27E49 /* CNContactStore+NameForPhoneNumber.m */,
 				327799021E9505A200E27E49 /* Main.storyboard */,
 				327799051E9505A200E27E49 /* Assets.xcassets */,
 				327799071E9505A200E27E49 /* LaunchScreen.storyboard */,
@@ -171,6 +176,7 @@
 				327799011E9505A200E27E49 /* ViewController.m in Sources */,
 				327799151E9506E900E27E49 /* CNContact+HasThisPhone.m in Sources */,
 				327798FE1E9505A200E27E49 /* AppDelegate.m in Sources */,
+				327799181E95080800E27E49 /* CNContactStore+NameForPhoneNumber.m in Sources */,
 				327798FB1E9505A200E27E49 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
