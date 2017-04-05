@@ -14,6 +14,7 @@
 		327799061E9505A200E27E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 327799051E9505A200E27E49 /* Assets.xcassets */; };
 		327799091E9505A200E27E49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327799071E9505A200E27E49 /* LaunchScreen.storyboard */; };
 		327799121E95068B00E27E49 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327799111E95068B00E27E49 /* Contacts.framework */; };
+		327799151E9506E900E27E49 /* CNContact+HasThisPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 327799141E9506E900E27E49 /* CNContact+HasThisPhone.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		327799081E9505A200E27E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3277990A1E9505A200E27E49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		327799111E95068B00E27E49 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		327799131E9506E900E27E49 /* CNContact+HasThisPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CNContact+HasThisPhone.h"; sourceTree = "<group>"; };
+		327799141E9506E900E27E49 /* CNContact+HasThisPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CNContact+HasThisPhone.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				327798FD1E9505A200E27E49 /* AppDelegate.m */,
 				327798FF1E9505A200E27E49 /* ViewController.h */,
 				327799001E9505A200E27E49 /* ViewController.m */,
+				327799131E9506E900E27E49 /* CNContact+HasThisPhone.h */,
+				327799141E9506E900E27E49 /* CNContact+HasThisPhone.m */,
 				327799021E9505A200E27E49 /* Main.storyboard */,
 				327799051E9505A200E27E49 /* Assets.xcassets */,
 				327799071E9505A200E27E49 /* LaunchScreen.storyboard */,
@@ -164,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				327799011E9505A200E27E49 /* ViewController.m in Sources */,
+				327799151E9506E900E27E49 /* CNContact+HasThisPhone.m in Sources */,
 				327798FE1E9505A200E27E49 /* AppDelegate.m in Sources */,
 				327798FB1E9505A200E27E49 /* main.m in Sources */,
 			);
