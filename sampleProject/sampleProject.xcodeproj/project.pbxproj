@@ -15,7 +15,7 @@
 		327799091E9505A200E27E49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327799071E9505A200E27E49 /* LaunchScreen.storyboard */; };
 		327799121E95068B00E27E49 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327799111E95068B00E27E49 /* Contacts.framework */; };
 		327799151E9506E900E27E49 /* CNContact+HasThisPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 327799141E9506E900E27E49 /* CNContact+HasThisPhone.m */; };
-		327FF4601E968F8F0072E8DF /* ContactsLookupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 327FF45F1E968F8F0072E8DF /* ContactsLookupManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		327FF4601E968F8F0072E8DF /* ContactsLookupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 327FF45F1E968F8F0072E8DF /* ContactsLookupManager.m */; };
 		327FF4631E9690490072E8DF /* NSAttributedString+Contactified.m in Sources */ = {isa = PBXBuildFile; fileRef = 327FF4621E9690490072E8DF /* NSAttributedString+Contactified.m */; };
 /* End PBXBuildFile section */
 
