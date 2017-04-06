@@ -26,7 +26,7 @@
      options:NSAttributedStringEnumerationReverse
      usingBlock:^(NSDictionary<NSString *,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop) {
          
-         NSURL *link = [attrs valueForKey:@"__kIMLinkAttributeName"];
+         NSURL *link = [attrs valueForKey:NSLinkAttributeName];
          if ([link.scheme isEqualToString:@"tel"]) {
              
              NSString *phone = [[mutableSelf attributedSubstringFromRange:range] string];
