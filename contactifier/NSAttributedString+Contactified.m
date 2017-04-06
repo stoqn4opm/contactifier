@@ -7,7 +7,7 @@
 //
 
 #import "NSAttributedString+Contactified.h"
-#import "CNContactStore+NameForPhoneNumber.h"
+#import "ContactsLookupManager.h"
 #import <UIKit/UIKit.h>
 
 @implementation NSAttributedString (Contactified)
@@ -30,10 +30,9 @@
          if ([link.scheme isEqualToString:@"tel"]) {
              
              NSString *phone = [[mutableSelf attributedSubstringFromRange:range] string];
-             CNContactStore *store = [[CNContactStore alloc] init];
-             NSString *name = [store nameForPhoneNumber:phone];
+             NSString *name = [[ContactsLookupManager sharedInstance] contactNameFromPhone:phone];
              
-             if (name.length != 0) {
+             if (name) {
                  NSString *originalText = [[mutableSelf attributedSubstringFromRange:range] string];
                  [mutableSelf replaceCharactersInRange:range withString:[NSString stringWithFormat:@"%@ (%@)", originalText, name]];
              }
