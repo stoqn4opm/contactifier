@@ -35,6 +35,7 @@
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:CNContactStoreDidChangeNotification object:nil];
+    [super dealloc];
 }
 
 - (instancetype)init {
