@@ -13,7 +13,7 @@
 
 - (NSString *)nameForPhoneNumber:(NSString *)searchedPhone {
     
-    NSString __block *result;
+    NSMutableString __block *result = [NSMutableString new];
     
     CNContactFetchRequest *fetchRequest = [[CNContactFetchRequest alloc] initWithKeysToFetch:@[CNContactPhoneNumbersKey]];
     [self enumerateContactsWithFetchRequest:fetchRequest error:nil usingBlock:^(CNContact * _Nonnull contact, BOOL * _Nonnull stop) {
@@ -23,11 +23,12 @@
         if (hasFoundContact) {
             NSArray *keysToFetch = @[[CNContactFormatter descriptorForRequiredKeysForStyle:CNContactFormatterStyleFullName]];
             CNContact *fullContact = [self unifiedContactWithIdentifier:contact.identifier keysToFetch:keysToFetch error:nil];
-            result = [CNContactFormatter stringFromContact:fullContact style: CNContactFormatterStyleFullName];
+            NSString * formatted = [CNContactFormatter stringFromContact:fullContact style: CNContactFormatterStyleFullName];
+            [result appendString:formatted];
             *stop = YES;
         }
     }];
-    
+
     return result;
 }
 

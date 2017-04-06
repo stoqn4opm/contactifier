@@ -29,11 +29,11 @@
          NSURL *link = [attrs valueForKey:@"__kIMLinkAttributeName"];
          if ([link.scheme isEqualToString:@"tel"]) {
              
-//             NSString *phone = [[mutableSelf attributedSubstringFromRange:range] string];
-//             CNContactStore *store = [[CNContactStore alloc] init];
-             NSString *name = @"Stoyan Stoyanov";// [store nameForPhoneNumber:phone];
+             NSString *phone = [[mutableSelf attributedSubstringFromRange:range] string];
+             CNContactStore *store = [[CNContactStore alloc] init];
+             NSString *name = [store nameForPhoneNumber:phone];
              
-             if (name) {
+             if (name.length != 0) {
                  NSString *originalText = [[mutableSelf attributedSubstringFromRange:range] string];
                  [mutableSelf replaceCharactersInRange:range withString:[NSString stringWithFormat:@"%@ (%@)", originalText, name]];
              }
