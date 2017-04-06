@@ -18,13 +18,23 @@
 
 @implementation ContactsLookupManager
 
+#pragma mark - Singleton Refference
+
 + (instancetype)sharedInstance {
     static ContactsLookupManager *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[ContactsLookupManager alloc] init];
+        [[NSNotificationCenter defaultCenter] addObserver:sharedInstance selector:@selector(addressBookDidChange:) name:CNContactStoreDidChangeNotification object:nil];
+
     });
     return sharedInstance;
+}
+
+#pragma mark - Initialization / Deallocation
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:CNContactStoreDidChangeNotification object:nil];
 }
 
 - (instancetype)init {
@@ -33,15 +43,21 @@
         self.store = [[CNContactStore alloc] init];
         self.contacts = [[NSMutableArray alloc] init];
         
-        NSArray *keysToFetch = @[CNContactPhoneNumbersKey, [CNContactFormatter descriptorForRequiredKeysForStyle:CNContactFormatterStyleFullName]];
-        CNContactFetchRequest *fetchRequest = [[CNContactFetchRequest alloc] initWithKeysToFetch:keysToFetch];
-        
-        [self.store enumerateContactsWithFetchRequest:fetchRequest error:nil usingBlock:^(CNContact * _Nonnull contact, BOOL * _Nonnull stop) {
-            [self.contacts addObject:contact];
-        }];
+        [self fetchContacts];
     }
     return self;
 }
+
+- (void)fetchContacts {
+    NSArray *keysToFetch = @[CNContactPhoneNumbersKey, [CNContactFormatter descriptorForRequiredKeysForStyle:CNContactFormatterStyleFullName]];
+    CNContactFetchRequest *fetchRequest = [[CNContactFetchRequest alloc] initWithKeysToFetch:keysToFetch];
+    
+    [self.store enumerateContactsWithFetchRequest:fetchRequest error:nil usingBlock:^(CNContact * _Nonnull contact, BOOL * _Nonnull stop) {
+        [self.contacts addObject:contact];
+    }];
+}
+
+#pragma mark - Main Functionality
 
 - (NSString *)contactNameFromPhone:(NSString *)phone {
     NSString *result = nil;
@@ -52,6 +68,13 @@
         }
     }
     return result;
+}
+
+#pragma mark - Contact Updates 
+
+- (void)addressBookDidChange:(NSNotification *)notification {
+    self.contacts = [[NSMutableArray alloc] init];
+    [self fetchContacts];
 }
 
 @end
