@@ -1,5 +1,7 @@
 #import "NSAttributedString+Contactified.h"
 
+// Message Balloon Size related hacks
+
 %hook CKChatItem
 
 +(id)chatItemWithIMChatItem:(id)arg1 balloonMaxWidth:(double)arg2 otherMaxWidth:(double)arg3 {
@@ -14,6 +16,8 @@
 }
 
 %end
+
+// Messages Altering
 
 %hook CKBalloonTextView
 
