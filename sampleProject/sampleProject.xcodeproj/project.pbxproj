@@ -16,7 +16,7 @@
 		327799121E95068B00E27E49 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327799111E95068B00E27E49 /* Contacts.framework */; };
 		327799151E9506E900E27E49 /* CNContact+HasThisPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 327799141E9506E900E27E49 /* CNContact+HasThisPhone.m */; };
 		3277991B1E9509E800E27E49 /* NSAttributedString+Contactified.m in Sources */ = {isa = PBXBuildFile; fileRef = 3277991A1E9509E800E27E49 /* NSAttributedString+Contactified.m */; };
-		327FF45B1E9688A40072E8DF /* ContactsLookupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 327FF45A1E9688A40072E8DF /* ContactsLookupManager.m */; };
+		327FF4601E968F8F0072E8DF /* ContactsLookupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 327FF45F1E968F8F0072E8DF /* ContactsLookupManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +35,8 @@
 		327799141E9506E900E27E49 /* CNContact+HasThisPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CNContact+HasThisPhone.m"; sourceTree = "<group>"; };
 		327799191E9509E800E27E49 /* NSAttributedString+Contactified.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Contactified.h"; sourceTree = "<group>"; };
 		3277991A1E9509E800E27E49 /* NSAttributedString+Contactified.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Contactified.m"; sourceTree = "<group>"; };
-		327FF4591E9688A40072E8DF /* ContactsLookupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsLookupManager.h; sourceTree = "<group>"; };
-		327FF45A1E9688A40072E8DF /* ContactsLookupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsLookupManager.m; sourceTree = "<group>"; };
+		327FF45E1E968F8F0072E8DF /* ContactsLookupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactsLookupManager.h; path = ../../contactifier/ContactsLookupManager.h; sourceTree = "<group>"; };
+		327FF45F1E968F8F0072E8DF /* ContactsLookupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactsLookupManager.m; path = ../../contactifier/ContactsLookupManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +104,8 @@
 		327FF45C1E968DD60072E8DF /* Contacts Fetching Related */ = {
 			isa = PBXGroup;
 			children = (
-				327FF4591E9688A40072E8DF /* ContactsLookupManager.h */,
-				327FF45A1E9688A40072E8DF /* ContactsLookupManager.m */,
+				327FF45E1E968F8F0072E8DF /* ContactsLookupManager.h */,
+				327FF45F1E968F8F0072E8DF /* ContactsLookupManager.m */,
 				327FF45D1E968DE70072E8DF /* Helper Categories */,
 			);
 			name = "Contacts Fetching Related";
@@ -196,9 +196,9 @@
 			files = (
 				3277991B1E9509E800E27E49 /* NSAttributedString+Contactified.m in Sources */,
 				327799011E9505A200E27E49 /* ViewController.m in Sources */,
+				327FF4601E968F8F0072E8DF /* ContactsLookupManager.m in Sources */,
 				327799151E9506E900E27E49 /* CNContact+HasThisPhone.m in Sources */,
 				327798FE1E9505A200E27E49 /* AppDelegate.m in Sources */,
-				327FF45B1E9688A40072E8DF /* ContactsLookupManager.m in Sources */,
 				327798FB1E9505A200E27E49 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
