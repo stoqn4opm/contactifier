@@ -8,7 +8,7 @@
 
     if ([NSStringFromClass([arg1 class]) isEqualToString:@"IMTextMessagePartChatItem"]) {
 		//this weird trick with random numbers is done in order to invalidate message balloons sizes
-        CGFloat rand = 1 + 2.0 / arc4random_uniform(1000);
+        double rand = 1.0 - 1.0 / arc4random_uniform(100);
         return %orig(arg1, arg2 * rand, arg3 * rand);
     } else {
         return %orig;
