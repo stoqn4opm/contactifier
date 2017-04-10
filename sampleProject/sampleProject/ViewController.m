@@ -17,10 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *text = @"0895155789 is the number that you have dialed before several days, and you have tried this number also 0897949488";
+    NSString *text = @"0895155789 is the number that you have dialed before several days, and you have tried this number also  +359 39 7949488";
     NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:text];
     [string addAttribute:NSLinkAttributeName value:[NSURL URLWithString:@"tel://0895155789"] range:NSMakeRange(0,10)];
-    [string addAttribute:NSLinkAttributeName value:[NSURL URLWithString:@"tel://0897949488"] range:NSMakeRange(text.length - 10,10)];
+    [string addAttribute:NSLinkAttributeName value:[NSURL URLWithString:@"tel://0897949488"] range:NSMakeRange(text.length - 16,16)];
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithAttributedString:string];
     
     self.textView.attributedText = [attributedString contactifiedString];

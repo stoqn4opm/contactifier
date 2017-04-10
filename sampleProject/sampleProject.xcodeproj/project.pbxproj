@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		326ACC9C1E9BA24A00EB8156 /* CNLabeledValue+ComparisonGrade.m in Sources */ = {isa = PBXBuildFile; fileRef = 326ACC9B1E9BA24A00EB8156 /* CNLabeledValue+ComparisonGrade.m */; };
+		326ACC9F1E9BA6D400EB8156 /* NSString+ReversedChars.m in Sources */ = {isa = PBXBuildFile; fileRef = 326ACC9E1E9BA6D400EB8156 /* NSString+ReversedChars.m */; };
 		327798FB1E9505A200E27E49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 327798FA1E9505A200E27E49 /* main.m */; };
 		327798FE1E9505A200E27E49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 327798FD1E9505A200E27E49 /* AppDelegate.m */; };
 		327799011E9505A200E27E49 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 327799001E9505A200E27E49 /* ViewController.m */; };
@@ -20,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		326ACC9A1E9BA24A00EB8156 /* CNLabeledValue+ComparisonGrade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CNLabeledValue+ComparisonGrade.h"; sourceTree = "<group>"; };
+		326ACC9B1E9BA24A00EB8156 /* CNLabeledValue+ComparisonGrade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CNLabeledValue+ComparisonGrade.m"; sourceTree = "<group>"; };
+		326ACC9D1E9BA6D400EB8156 /* NSString+ReversedChars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ReversedChars.h"; sourceTree = "<group>"; };
+		326ACC9E1E9BA6D400EB8156 /* NSString+ReversedChars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ReversedChars.m"; sourceTree = "<group>"; };
 		327798F61E9505A200E27E49 /* sampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		327798FA1E9505A200E27E49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		327798FC1E9505A200E27E49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +124,10 @@
 				327FF4621E9690490072E8DF /* NSAttributedString+Contactified.m */,
 				327799131E9506E900E27E49 /* CNContact+HasThisPhone.h */,
 				327799141E9506E900E27E49 /* CNContact+HasThisPhone.m */,
+				326ACC9A1E9BA24A00EB8156 /* CNLabeledValue+ComparisonGrade.h */,
+				326ACC9B1E9BA24A00EB8156 /* CNLabeledValue+ComparisonGrade.m */,
+				326ACC9D1E9BA6D400EB8156 /* NSString+ReversedChars.h */,
+				326ACC9E1E9BA6D400EB8156 /* NSString+ReversedChars.m */,
 			);
 			name = "Helper Categories";
 			sourceTree = "<group>";
@@ -195,11 +205,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				327FF4631E9690490072E8DF /* NSAttributedString+Contactified.m in Sources */,
+				326ACC9C1E9BA24A00EB8156 /* CNLabeledValue+ComparisonGrade.m in Sources */,
 				327799011E9505A200E27E49 /* ViewController.m in Sources */,
 				327FF4601E968F8F0072E8DF /* ContactsLookupManager.m in Sources */,
 				327799151E9506E900E27E49 /* CNContact+HasThisPhone.m in Sources */,
 				327798FE1E9505A200E27E49 /* AppDelegate.m in Sources */,
 				327798FB1E9505A200E27E49 /* main.m in Sources */,
+				326ACC9F1E9BA6D400EB8156 /* NSString+ReversedChars.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
