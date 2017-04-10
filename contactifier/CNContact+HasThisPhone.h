@@ -10,4 +10,5 @@
 
 @interface CNContact (HasThisPhone)
 - (BOOL)hasThisPhoneRecord:(NSString *)searchedPhone;
+- (NSNumber *)contactComparisonGradeFor:(NSString *)phoneNumber;
 @end

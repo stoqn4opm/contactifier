@@ -10,6 +10,8 @@
 #import <Contacts/Contacts.h>
 #import "CNContact+HasThisPhone.h"
 
+#define MINIMUM_PASS_GRADE 0.6
+
 @interface ContactsLookupManager()
 
 @property(nonatomic, strong) CNContactStore *store;
@@ -60,14 +62,42 @@
 #pragma mark - Main Functionality
 
 - (NSString *)contactNameFromPhone:(NSString *)phone {
-    NSString *result = nil;
+    
+    NSMutableArray<NSNumber *> *contactGrades = [[NSMutableArray alloc] init];
+    NSMutableArray<CNContact *> *contacts = [[NSMutableArray alloc] init];
+    
     for (CNContact *contact in self.contacts) {
         if ([contact hasThisPhoneRecord:phone]) {
-            result = [CNContactFormatter stringFromContact:contact style: CNContactFormatterStyleFullName];
+            return [CNContactFormatter stringFromContact:contact style: CNContactFormatterStyleFullName];
             break;
+        } else {
+            NSNumber *gradeForContact = [contact contactComparisonGradeFor:phone];
+            [contactGrades addObject:gradeForContact];
+            [contacts addObject:contact];
         }
     }
-    return result;
+    
+    NSNumber *indexOfMaxGrade = nil;
+    for (NSInteger i = 0; i < contactGrades.count; i++) {
+        
+        if (!indexOfMaxGrade) {
+            indexOfMaxGrade = @(i);
+            continue;
+        }
+        
+        if (contactGrades[indexOfMaxGrade.integerValue].doubleValue < contactGrades[i].doubleValue) {
+            indexOfMaxGrade = @(i);
+        }
+    }
+    
+    
+    if (!indexOfMaxGrade || contactGrades[indexOfMaxGrade.integerValue].doubleValue < MINIMUM_PASS_GRADE) {
+        return nil;
+    }
+    
+    CNContact *highestGradedContact = contacts[indexOfMaxGrade.integerValue];
+    NSString *highestGradedContactName = [CNContactFormatter stringFromContact:highestGradedContact style: CNContactFormatterStyleFullName];
+    return [NSString stringWithFormat:@"%@ ?", highestGradedContactName];
 }
 
 #pragma mark - Contact Updates 
