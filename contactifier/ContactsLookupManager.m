@@ -10,7 +10,6 @@
 #import <Contacts/Contacts.h>
 #import "CNContact+HasThisPhone.h"
 
-#define MINIMUM_PASS_GRADE 0.6
 
 @interface ContactsLookupManager()
 
@@ -71,10 +70,16 @@
             return [CNContactFormatter stringFromContact:contact style: CNContactFormatterStyleFullName];
             break;
         } else {
-            NSNumber *gradeForContact = [contact contactComparisonGradeFor:phone];
-            [contactGrades addObject:gradeForContact];
-            [contacts addObject:contact];
+            if (self.closeMatchesOn) {
+                NSNumber *gradeForContact = [contact contactComparisonGradeFor:phone];
+                [contactGrades addObject:gradeForContact];
+                [contacts addObject:contact];
+            }
         }
+    }
+    
+    if (!self.closeMatchesOn) {
+        return nil;
     }
     
     NSNumber *indexOfMaxGrade = nil;
@@ -91,7 +96,7 @@
     }
     
     
-    if (!indexOfMaxGrade || contactGrades[indexOfMaxGrade.integerValue].doubleValue < MINIMUM_PASS_GRADE) {
+    if (!indexOfMaxGrade || contactGrades[indexOfMaxGrade.integerValue].doubleValue < self.closeMatchesThreshold.doubleValue) {
         return nil;
     }
     

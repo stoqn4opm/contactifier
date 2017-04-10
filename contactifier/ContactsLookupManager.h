@@ -10,5 +10,10 @@
 
 @interface ContactsLookupManager : NSObject
 + (instancetype)sharedInstance;
+
 - (NSString *)contactNameFromPhone:(NSString *)phone;
+
+@property (nonatomic, assign) BOOL closeMatchesOn;
+@property (nonatomic, strong) NSNumber *closeMatchesThreshold;
+
 @end
