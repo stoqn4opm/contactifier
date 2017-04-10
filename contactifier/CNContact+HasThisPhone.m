@@ -7,6 +7,7 @@
 //
 
 #import "CNContact+HasThisPhone.h"
+#import "CNLabeledValue+ComparisonGrade.h"
 
 @implementation CNContact (HasThisPhone)
 
@@ -26,6 +27,20 @@
         }
     }
     return contactIsFound;
+}
+
+- (NSNumber *)contactComparisonGradeFor:(NSString *)phoneNumber {
+    
+    NSString *phoneNumberNoWhiteSpace = [[phoneNumber componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] componentsJoinedByString:@""];
+    NSMutableArray<NSNumber *> *grades = [[NSMutableArray alloc] init];
+    
+    for (CNLabeledValue *phone in [self phoneNumbers]) {
+        NSNumber *grade = [phone getPhoneComparisonGradeFor:phoneNumberNoWhiteSpace];
+        [grades addObject:grade];
+    }
+    
+    NSNumber *maxGrade = [grades valueForKeyPath:@"@max.doubleValue"];
+    return maxGrade;
 }
 
 @end
