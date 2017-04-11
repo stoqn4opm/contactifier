@@ -15,16 +15,20 @@ static void loadPrefs() {
         MATCH_THRESHOLD = ([prefs objectForKey:@"threshold"] ? [prefs objectForKey:@"threshold"] : MATCH_THRESHOLD);
         
         [[ContactsLookupManager sharedInstance] setCloseMatchesOn:CLOSE_MATCHES];
-        [[ContactsLookupManager sharedInstance] setCloseMatchesThreshold:MATCH_THRESHOLD];
+        [[ContactsLookupManager sharedInstance] setCloseMatchesThreshold:@(MATCH_THRESHOLD.doubleValue / 100.0)];
         NSLog(@"threshold set to :%@", MATCH_THRESHOLD);
     }
 }
 
-%ctor {
-    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)loadPrefs, CFSTR("com.stoqn4opm.contactifier.plist"), NULL, CFNotificationSuspensionBehaviorCoalesce);
+%hook CKChatController
+
+- (void)viewWillAppear:(BOOL)animated {
     loadPrefs();
-    NSLog(@"ctor");
+    %orig;
+    NSLog(@"viewWillAppear");
 }
+
+%end
 
 #pragma mark - Message Balloon Size related hacks
 
@@ -38,7 +42,7 @@ static void loadPrefs() {
 
     if ([NSStringFromClass([arg1 class]) isEqualToString:@"IMTextMessagePartChatItem"]) {
         //this weird trick with random numbers is done in order to invalidate message balloons sizes
-        double rand = 1.0 - 1.0 / arc4random_uniform(100);
+        double rand = 1.0 - 1.0 / arc4random_uniform(1000);
         return %orig(arg1, arg2 * rand, arg3 * rand);
     } else {
         return %orig;
