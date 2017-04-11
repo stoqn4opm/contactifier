@@ -3,7 +3,7 @@ Name: Contactifier
 Depends: mobilesubstrate
 Version: 1.1.1
 Architecture: iphoneos-arm
-Description: Contactifier is a simple MobileSubstrate Tweak, that makes the Messages app more convinient. Basically what this tweak does is that it append additional info after detected phone number inside message balloon, if the given phone number can be found inside the address book of the device. I found this tweak pretty useful when i receive sms messages from my operator like "The number 123456789 that you have tried to contact is back online.". With the help of the tweak the message becomes "The number 123456789 (John Smith) that you have tried to contact is back online."
+Description: Sample Video: https://youtu.be/BejFljmRRpw . Contactifier is a simple MobileSubstrate Tweak, that makes the Messages app more convinient. Basically what this tweak does is that it append additional info after detected phone number inside message balloon, if the given phone number can be found inside the address book of the device. I found this tweak pretty useful when i receive sms messages from my operator like "The number 123456789 that you have tried to contact is back online.". With the help of the tweak the message becomes "The number 123456789 (John Smith) that you have tried to contact is back online."
 Maintainer: Stoyan Stoyanov
 Author: Stoyan Stoyanov <stoqn.stoqnov.93@gmail.com>
 Section: Tweaks
