@@ -70,7 +70,7 @@
 			<key>defaults</key>
 			<string>com.stoqn4opm.contactifier</string>
 			<key>default</key>
-			<integer>65</integer>
+			<integer>60</integer>
 			<key>PostNotification</key>
 			<string>com.stoqn4opm.contactifier.plist</string>
 		</dict>
