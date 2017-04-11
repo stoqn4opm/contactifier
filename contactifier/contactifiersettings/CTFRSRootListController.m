@@ -1,6 +1,6 @@
-#include "CTPRootListController.h"
+#include "CTFRSRootListController.h"
 
-@implementation CTPRootListController
+@implementation CTFRSRootListController
 
 - (NSArray *)specifiers {
 	if (!_specifiers) {

@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>title</key>
+	<string>Contactifier</string>
 	<key>items</key>
 	<array>
 		<dict>
@@ -95,7 +97,5 @@
 			<string>facebook</string>
 		</dict>
 	</array>
-	<key>title</key>
-	<string>Contactifier</string>
 </dict>
 </plist>
