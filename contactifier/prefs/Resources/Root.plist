@@ -30,7 +30,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>Close matches are helpful when the given phone has no perfect match in adress book. If enabled, each phone from contacts is compared to the searched phone in reverse and it receives a percentage mark for how close it is to the searched phone. When all phones are evaluated, the one with the best match is elected and if it is above the threshold it is considered to be the contact that we are searching for. (lower threshold - more contacts, greater possibility of wrong guess, higher threshold - less contacts, less possible wrong guess). In Order for this settings to be applied, you have to reopen the message that you want to be re-parsed.</string>
+			<string>Close matches are helpful when the given phone has no perfect match in adress book. They will be marked with &quot;?&quot; in the end. If enabled, each phone from contacts is compared to the searched phone in reverse and it receives a percentage mark for how close it is to the searched phone. When all phones are evaluated, the one with the best match is elected and if it is above the threshold it is considered to be the contact that we are searching for. (lower threshold - more contacts, greater possibility of wrong guess, higher threshold - less contacts, less possible wrong guess). In Order for this settings to be applied, you have to reopen the message that you want to be re-parsed.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
