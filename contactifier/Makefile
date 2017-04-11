@@ -9,3 +9,5 @@ ADDITIONAL_OBJCFLAGS = -fobjc-arc
 
 after-install::
 	install.exec "killall -9 MobileSMS"
+SUBPROJECTS += prefs
+include $(THEOS_MAKE_PATH)/aggregate.mk

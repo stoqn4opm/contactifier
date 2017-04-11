@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.stoqn4opm.contactifier</string>
+			<key>key</key>
+			<string>enabled</string>
+			<key>label</key>
+			<string>Enabled</string>
+			<key>PostNotification</key>
+			<string>com.stoqn4opm.contactifier.plist</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Thanks for using my tweak 😉! I hope you are founding it useful. Don&apos;t hesitate to contact me if you are having troubles and/or questions.</string>
+			<key>footerAlignment</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Close matches are helpful when the given phone has no perfect match in adress book. If enabled, each phone from contacts is compared to the searched phone in reverse and it receives a percentage mark for how close it is to the searched phone. When all phones are evaluated, the one with the best match is elected and if it is above the threshold it is considered to be the contact that we are searching for. (lower threshold - more contacts, greater possibility of wrong guess, higher threshold - less contacts, less possible wrong guess). In Order for this settings to be applied, you have to reopen the message that you want to be re-parsed.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.stoqn4opm.contactifier</string>
+			<key>key</key>
+			<string>closeMatches</string>
+			<key>label</key>
+			<string>Close Matches</string>
+			<key>PostNotification</key>
+			<string>com.stoqn4opm.contactifier.plist</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>label</key>
+			<string>Choose Close Match Threshold</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>max</key>
+			<integer>100</integer>
+			<key>min</key>
+			<integer>0</integer>
+			<key>showValue</key>
+			<true/>
+			<key>isSegmented</key>
+			<true/>
+			<key>segmentCount</key>
+			<integer>20</integer>
+			<key>key</key>
+			<string>threshold</string>
+			<key>defaults</key>
+			<string>com.stoqn4opm.contactifier</string>
+			<key>default</key>
+			<integer>60</integer>
+			<key>PostNotification</key>
+			<string>com.stoqn4opm.contactifier.plist</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Donate (PayPal)</string>
+			<key>action</key>
+			<string>donate</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Find me on Facebook</string>
+			<key>action</key>
+			<string>facebook</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Contactifier</string>
+</dict>
+</plist>
