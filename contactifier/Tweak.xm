@@ -16,7 +16,6 @@ static void loadPrefs() {
         
         [[ContactsLookupManager sharedInstance] setCloseMatchesOn:CLOSE_MATCHES];
         [[ContactsLookupManager sharedInstance] setCloseMatchesThreshold:@(MATCH_THRESHOLD.doubleValue / 100.0)];
-        NSLog(@"threshold set to :%@", MATCH_THRESHOLD);
     }
 }
 
@@ -25,7 +24,6 @@ static void loadPrefs() {
 - (void)viewWillAppear:(BOOL)animated {
     loadPrefs();
     %orig;
-    NSLog(@"viewWillAppear");
 }
 
 %end
